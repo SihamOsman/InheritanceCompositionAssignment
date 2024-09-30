@@ -4,14 +4,13 @@ public class Movie extends Media {
     private int length;
     private String description;
     private double grossing;
-    private Location location;
 
-    public Movie(String title, String rating, String director, ArrayList<String> cast, int length, String description, double grossing, Location location) {
-        super(title, rating, director, cast);
+
+    public Movie(String title, String rating, Director director, ArrayList<Actor> actors, int length, String description, double grossing) {
+        super(title, rating, director, actors);
         this.length = length;
         this.description = description;
         this.grossing = grossing;
-        this.location = location;
     }
 
     public int getLength() {
@@ -36,13 +35,5 @@ public class Movie extends Media {
 
     public void setGrossing(double grossing) {
         this.grossing = grossing;
-    }
-
-    public Location getLocation() {
-        return location;
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
     }
 }

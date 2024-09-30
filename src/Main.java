@@ -1,19 +1,18 @@
 import java.util.ArrayList;
-import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        Location location=new Location("NorthAmerica","USA");
-        ArrayList<String> cast=new ArrayList<>();
-        cast.add("Sam");
-        cast.add("Jimmy");
-        Media homeAlone =new Media("Home Alone","PG:13","Frank" ,cast);
-        Movie seattle = new Movie("Seattle","PG-13","Steve",cast,34,"Action",1000000,location);
-        TvShow friends =new TvShow("Friends","PG-13","Megan",cast,55,"Comedy",300000,location,6,134);
-        System.out.println(homeAlone.getTitle());
-        System.out.println(cast);
+        Director director = new Director("Steve","Harvey");
+        ArrayList<Actor> actors = new ArrayList<>();
+        actors.add(new Actor("Matt Damon"));
+        actors.add(new Actor("Sofia Roberto"));
+        Movie seattle = new Movie("Seattle","PG-13",director,actors,44,"Drama",100000);
+        TvShow friends =new TvShow("Friends","PG-13",director, actors,55,"Comedy",300000,6,134);
+
+
         System.out.println(seattle.getDirector());
-        System.out.println(seattle.getLocation());
-        System.out.println(friends.getEpisodes());
+        System.out.println(seattle.getActors());
         System.out.println(friends.getRating());
+        System.out.println(friends.getDescription());
     }
 }
